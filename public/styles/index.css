@@ -1,0 +1,89 @@
+body{
+	background: url("/img/CIMG5396.JPG");
+	background-size: cover;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-size: 1em;
+}
+
+.show{
+	display:flex !important;
+}
+
+div.content{
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	background-color:white;
+	padding:20px;
+}
+
+@media screen and (max-width: 600px) {
+ 	div.content{
+	    width: 100%;
+ 	}
+}
+
+@media screen and (min-width: 601px) {
+	div.content{
+		border-radius: 5px;
+		width: 50%;
+		max-width: 300px;
+	}
+}
+
+div.content h1{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+div.content h2{
+    text-align: center;
+    font-size: 1em;
+}
+
+div.content h3{
+    font-size: 1em;
+}
+div#text{
+	display: flex;
+	min-height: 300px;
+	background-color: white;
+	border-radius: 10px;
+}
+input#textOtro{
+	display:none;
+}
+
+div.content form{
+	display:flex;
+	flex-direction:column;
+	width: 100%;
+	display:none;
+	border-top: 1px solid lightgrey;
+}
+/*
+div.content form div{
+	//padding-left:20px;
+}*/
+.checkboxes{
+	display:flex;
+	flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom:20px;
+}
+.checkboxes div{
+	display: flex;
+	flex-grow:2;
+	padding-bottom: 10px;
+}
+.pregunta{
+	display:none;
+    flex-direction: column;
+}
