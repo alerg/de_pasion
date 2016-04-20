@@ -10,3 +10,9 @@ function continuar(){
 		break;
 	}
 }
+
+function mySubmit(e, form){
+	continuar();
+	e.preventDefault();
+	console.log(form);
+}

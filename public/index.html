@@ -3,15 +3,15 @@
 
 <head>
     <title>Hay Equipo</title>
-    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 
 <body>
     <div id="text" class="content">
         <h1>En <strong>Hay Equipo</strong> <span>necesitamos tu ayuda</span>.</h1>
         <h2>Contestando estas preguntas nos vas a ayudar a crear la aplicacion para <strong>vos.</strong></h2>
-        <form id="experiment1">
-            <div class="pregunta" id="pregunta1">
+        <div id="experiment1">
+            <form class="pregunta" onsubmit="mySubmit(event, this)">
                 <h3>Que deportes practicas?</h3>
                 <div class="checkboxes">
                     <div>
@@ -40,10 +40,10 @@
                     </div>
                 </div>
                 <div>
-                	<button type="button" onclick="continuar()">Continuar</button>
+                	<button>Continuar</button>
                 </div>
-            </div>
-             <div class="pregunta" id="pregunta2">
+            </form>
+            <form class="pregunta" onsubmit="mySubmit(event, this)">
                 <h3>Mensualemnte, podrias decir que paracticas los deportes seleccionados anteriormente? </h3>
                 <div class="checkboxes">
                 	<div>
@@ -70,11 +70,12 @@
                 <div>
                 	<button>Finalizar</button>
                 </div>
-        </form>
+            </form>
+        </div>
     </div>
     <script src="//www.google-analytics.com/cx/api.js?experiment=zG5m9oCRS3mzs9PXpuUxfQ"></script>
-    <script type="text/javascript" src="/scripts/experiment.js"></script>
-    <script type="text/javascript" src="/scripts/index.js" async></script>
+    <script type="text/javascript" src="scripts/experiment.js"></script>
+    <script type="text/javascript" src="scripts/index.js" async></script>
 </body>
 
 </html>

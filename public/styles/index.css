@@ -1,5 +1,5 @@
 body{
-	background: url("/img/CIMG5396.JPG");
+	background: url("img/CIMG5396.JPG");
 	background-size: cover;
 	display: flex;
 	flex-direction:column;
