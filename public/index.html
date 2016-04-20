@@ -1,80 +1,43 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
     <title>Hay Equipo</title>
-    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
 <body>
     <div id="text" class="content">
-        <h1>En <strong>Hay Equipo</strong> <span>necesitamos tu ayuda</span>.</h1>
-        <h2>Contestando estas preguntas nos vas a ayudar a crear la aplicacion para <strong>vos.</strong></h2>
-        <form id="experiment1">
+        <h1>En <strong>Hay Equipo</strong> <span>necesitamos tu ayuda</span></h1>
+        <h2>Contestando estas preguntas nos vas a ayudar a crear la aplicación que <strong>vos</strong> necesitás.</h2>
+        <form id="experiment1" class="pure-form">
+            <fieldset>
             <div class="pregunta" id="pregunta1">
-                <h3>Que deportes practicas?</h3>
+                <h3>¿Qué deportes practicás?</h3>
                 <div class="checkboxes">
-                    <div>
-                        <label for="futbol">Futbol</label>
-                        <input type="checkbox" id="futbol" value="futbol" />
-                    </div>
-                    <div>
-                        <label for="paddle">Paddle</label>
-                        <input type="checkbox" id="paddle" value="paddle" />
-                    </div>
-                    <div>
-                        <label for="tenis">Tenis</label>
-                        <input type="checkbox" id="tenis" value="tenis" />
-                    </div>
-                    <div>
-                        <label for="voley">Voley</label>
-                        <input type="checkbox" id="voley" value="voley" />
-                    </div>
-                    <div>
-                        <label for="basquet">Basquet</label>
-                        <input type="checkbox" id="basquet" value="basquet" />
-                    </div>
-                    <div>
-                        <label for="otro">Otro</label>
-                        <input type="checkbox" id="otro" value="otro" />
-                    </div>
+                    <label for="futbol"><input type="checkbox" id="futbol" value="futbol" /> Futbol</label>
+                    <label for="paddle"><input type="checkbox" id="paddle" value="paddle" /> Paddle</label>
+                    <label for="tenis"><input type="checkbox" id="tenis" value="tenis" /> Tenis</label>
+                    <label for="voley"><input type="checkbox" id="voley" value="voley" /> Voley</label>
+                    <label for="basquet"><input type="checkbox" id="basquet" value="basquet" /> Basquet</label>
+                    <label for="otro"><input type="checkbox" id="otro" value="otro" /> Otro</label>
+                    <div><button type="button" class="pure-button pure-button-primary" onclick="continuar()">Continuar</button></div>
                 </div>
-                <div>
-                	<button type="button" onclick="continuar()">Continuar</button>
-                </div>
-            </div>
              <div class="pregunta" id="pregunta2">
-                <h3>Mensualemnte, podrias decir que paracticas los deportes seleccionados anteriormente? </h3>
+                <h3>Los deportes que seleccionaste podrías decir que practicás: </h3>
                 <div class="checkboxes">
-                	<div>
-                        <label for="1mes">1 vez al mes</label>
-                        <input type="checkbox" id="1mes" value="1" />
-                    </div>
+                    <label for="1mes"><input type="checkbox" id="1mes" value="1" /> 1 vez al mes</label>
+                    <label for="2mes"><input type="checkbox" id="2mes" value="2" /> 2 veces al mes</label>
+                    <label for="3mes"><input type="checkbox" id="3mes" value="3" /> 3 veces al mes</label>
+                    <label for="4mes"><input type="checkbox" id="4mes" value="4" /> 4 veces al mes</label>
+                    <label for="mas4Mes"><input type="checkbox" id="mas4Mes" value="5" /> Más de 4 veces al mes</label>
                     <div>
-                        <label for="2mes">2 veces al mes</label>
-                        <input type="checkbox" id="2mes" value="2" />
+                        <button type="button" class="pure-button pure-button-primary">Finalizar</button>
                     </div>
-                    <div>
-                        <label for="3mes">3 veces al mes</label>
-                        <input type="checkbox" id="3mes" value="3" />
-                    </div>
-                    <div>
-                        <label for="4mes">4 veces al mes</label>
-                        <input type="checkbox" id="4mes" value="4" />
-                    </div>
-                    <div>
-                        <label for="mas4Mes">mas de 4 veces al mes</label>
-                        <input type="checkbox" id="mas4Mes" value="5" />
-                    </div>
-                </div>
-                <div>
-                	<button>Finalizar</button>
-                </div>
+            </fieldset>
         </form>
     </div>
-    <script src="//www.google-analytics.com/cx/api.js?experiment=zG5m9oCRS3mzs9PXpuUxfQ"></script>
-    <script type="text/javascript" src="/scripts/experiment.js"></script>
-    <script type="text/javascript" src="/scripts/index.js" async></script>
 </body>
 
 </html>
