@@ -18,7 +18,7 @@ var logicaCheck = function(name, next, categoria_evento){
 		document.getElementById('experiment' + preguntaActual).classList.remove('show');
 		document.cookie = 'pregunta' + preguntaActual +'='+ next + ';';
 		preguntaActual = next;
-    	ga('send', 'event', 'investigacion', categoria_evento, '', deportes.join());
+    	ga('send', 'event', 'investigacion', categoria_evento, deportes.join());
 	}
 }
 
