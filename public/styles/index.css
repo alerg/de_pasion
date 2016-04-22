@@ -1,13 +1,14 @@
 body{
-	background: url("img/CIMG5396.JPG");
+	background: url("../img/CIMG5396.JPG");
 	background-size: cover;
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 	font-size: 1em;
+	padding: 20px 0;
 }
 
 .show{
@@ -21,12 +22,7 @@ div.content{
 	align-items: center;
 	background-color:white;
 	padding:20px;
-}
-
-@media screen and (max-width: 600px) {
- 	div.content{
-	    width: 100%;
- 	}
+	min-width: 250px;
 }
 
 @media screen and (min-width: 601px) {
@@ -37,6 +33,18 @@ div.content{
 	}
 }
 
+@media screen and (max-width: 600px) {
+ 	div.content{
+	    width: 85%;
+ 	}
+}
+
+@media screen and (max-width: 340px) {
+ 	div.content{
+	    width: 80%;
+ 	}
+}
+
 div.content h1{
     text-align: center;
     font-size: 1.2em;
@@ -45,6 +53,7 @@ div.content h1{
 div.content h2{
     text-align: center;
     font-size: 1em;
+    font-weight: 400;
 }
 
 div.content h3{
@@ -61,27 +70,28 @@ input#textOtro{
 }
 
 div.content form{
-	display:flex;
+	display:none;
 	flex-direction:column;
 	width: 100%;
-	display:none;
+	/*display:none;*/
 	border-top: 1px solid lightgrey;
+}
+
+div.content form.show{
+	display:flex;
 }
 /*
 div.content form div{
 	//padding-left:20px;
 }*/
 .checkboxes{
-	display:flex;
-	flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom:20px;
+	text-align: left;
+    padding-bottom: 20px;
 }
-.checkboxes div{
-	display: flex;
-	flex-grow:2;
-	padding-bottom: 10px;
+.checkboxes label{
+	display: inline-block;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 .pregunta{
 	display:none;

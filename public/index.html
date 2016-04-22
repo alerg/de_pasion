@@ -1,77 +1,115 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
     <title>Hay Equipo</title>
     <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
 <body>
     <div id="text" class="content">
-        <h1>En <strong>Hay Equipo</strong> <span>necesitamos tu ayuda</span>.</h1>
-        <h2>Contestando estas preguntas nos vas a ayudar a crear la aplicacion para <strong>vos.</strong></h2>
-        <div id="experiment1">
-            <form class="pregunta" onsubmit="mySubmit(event, this)">
-                <h3>Que deportes practicas?</h3>
+        <h1>En <strong>Hay Equipo</strong> <span>necesitamos tu ayuda</span></h1>
+        <h2>Contestando estas preguntas nos vas a ayudar a crear la aplicación que <strong>vos</strong> necesitás.</h2>
+        <form id="experiment1" class="pure-form">
+            <fieldset>
+                <h3>¿Qué deportes practicás?</h3>
                 <div class="checkboxes">
+                    <label for="futbol"><input type="checkbox" name="deporte" id="futbol" value="futbol" /> Futbol</label>
+                    <label for="paddle"><input type="checkbox" name="deporte" id="paddle" value="paddle" /> Paddle</label>
+                    <label for="tenis"><input type="checkbox" name="deporte" id="tenis" value="tenis" /> Tenis</label>
+                    <label for="voley"><input type="checkbox" name="deporte" id="voley" value="voley" /> Voley</label>
+                    <label for="basquet"><input type="checkbox" name="deporte" id="basquet" value="basquet" /> Basquet</label>
+                    <label for="otro"><input type="checkbox" name="deporte" id="otro" value="otro" /> Otro</label>
                     <div>
-                        <label for="futbol">Futbol</label>
-                        <input type="checkbox" id="futbol" value="futbol" />
-                    </div>
-                    <div>
-                        <label for="paddle">Paddle</label>
-                        <input type="checkbox" id="paddle" value="paddle" />
-                    </div>
-                    <div>
-                        <label for="tenis">Tenis</label>
-                        <input type="checkbox" id="tenis" value="tenis" />
-                    </div>
-                    <div>
-                        <label for="voley">Voley</label>
-                        <input type="checkbox" id="voley" value="voley" />
-                    </div>
-                    <div>
-                        <label for="basquet">Basquet</label>
-                        <input type="checkbox" id="basquet" value="basquet" />
-                    </div>
-                    <div>
-                        <label for="otro">Otro</label>
-                        <input type="checkbox" id="otro" value="otro" />
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(1, 'deportes')">Continuar</button>
                     </div>
                 </div>
-                <div>
-                	<button>Continuar</button>
-                </div>
-            </form>
-            <form class="pregunta" onsubmit="mySubmit(event, this)">
-                <h3>Mensualemnte, podrias decir que paracticas los deportes seleccionados anteriormente? </h3>
+            </fieldset>
+        </form>
+        <form id="experiment2" class="pure-form">
+            <fieldset>
+                <h3>¿Habitualmente organizas o participas de partidos de algun deporte?</h3>
                 <div class="checkboxes">
-                	<div>
-                        <label for="1mes">1 vez al mes</label>
-                        <input type="checkbox" id="1mes" value="1" />
-                    </div>
+                    <label for="experiment2SI"><input type="radio" name="experiment2Value" id="experiment2SI" value="SI" />SI</label>
+                    <label for="experiment2NO"><input type="radio" name="experiment2Value" id="experiment2NO" value="NO"/>NO</label>
                     <div>
-                        <label for="2mes">2 veces al mes</label>
-                        <input type="checkbox" id="2mes" value="2" />
-                    </div>
-                    <div>
-                        <label for="3mes">3 veces al mes</label>
-                        <input type="checkbox" id="3mes" value="3" />
-                    </div>
-                    <div>
-                        <label for="4mes">4 veces al mes</label>
-                        <input type="checkbox" id="4mes" value="4" />
-                    </div>
-                    <div>
-                        <label for="mas4Mes">mas de 4 veces al mes</label>
-                        <input type="checkbox" id="mas4Mes" value="5" />
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar()">Continuar</button>
                     </div>
                 </div>
-                <div>
-                	<button>Finalizar</button>
+            </fieldset>
+        </form>
+        <form id="experiment3" class="pure-form">
+            <fieldset>
+                <h3>¿Con qué frecuencia practicás los deportes seleccionados anteriormente?</h3>
+                <div class="checkboxes">
+                    <label for="1mes"><input type="radio" name="mes" id="1mes" value="1 vez al mes" />1 vez al mes</label>
+                    <label for="2mes"><input type="radio" name="mes" id="2mes" value="2 veces al mes" />2 veces al mes</label>
+                    <label for="3mes"><input type="radio" name="mes" id="3mes" value="3 veces al mes" /></label>
+                    <label for="4mes"><input type="radio" name="mes" id="4mes" value="4 veces al mes" />4 veces al mes</label>
+                    <label for="mas4Mes"><input type="radio" name="mes" id="mas4Mes" value="Más de 4 veces al mes" />Más de 4 veces al mes</label>
+                    <div>
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(2)">Continuar</button>
+                    </div>
                 </div>
-            </form>
-        </div>
+            </fieldset>
+        </form>
+        <form id="experiment4" class="pure-form">
+            <fieldset>
+                <h3>¿Sumarias a tu equipo a gente que no conoces para completar el equipo?</h3>
+                <div class="checkboxes">
+                    <label for="experiment4SI"><input type="radio" name="experiment4Value" id="experiment4SI" value="SI" />SI</label>
+                    <label for="experiment4NO"><input type="radio" name="experiment4Value" id="experiment4NO" value="NO" />NO</label>
+                    <div>
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(4)">Continuar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="experiment5" class="pure-form">
+            <fieldset>
+                <h3>Si te damos la posibilidad de calificar a los desconocidos para tener mas informacion la  proxima vez, lo calificarias de 1 a 5?</h3>
+                <div class="checkboxes">
+                    <label for="experiment5SI"><input type="radio" name="experiment5Value" id="experiment5SI" value="SI" />SI</label>
+                    <label for="experiment5NO"><input type="radio" name="experiment5Value" id="experiment5NO" value="NO" />NO</label>
+                    <div>
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(5)">Continuar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="experiment6" class="pure-form">
+            <fieldset>
+                <h3>¿Te sumarias una o varias veces a un equipo de desconocidos que juegan el mismo deporte?</h3>
+                <div class="checkboxes">
+                    <label for="experiment6SI"><input type="radio" name="experiment6Value" id="experiment6SI" value="SI" />SI</label>
+                    <label for="experiment6NO"><input type="radio" name="experiment6Value" id="experiment6NO" value="NO" />NO</label>
+                    <div>
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(6)">Continuar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="experiment7" class="pure-form">
+            <fieldset>
+                <h3>Al buscar chancha estas habituado a elejirla por(Se pueden elejir varias opciones)</h3>
+                <div class="checkboxes">
+                    <label for="1cancha"><input type="checkbox" name="cancha" id="1cancha" value="cercania" />Cercania</label>
+                    <label for="2cancha"><input type="checkbox" name="cancha" id="2cancha" value="primera_disponible" />La primera disponible</label>
+                    <label for="3cancha"><input type="checkbox" name="cancha" id="3cancha" value="barata" />La que sea mas barata</label>
+                    <label for="4cancha"><input type="checkbox" name="cancha" id="4cancha" value="la_mejor" />La que tenga la mejor cancha</label>
+                    <div>
+                        <button type="button" class="pure-button pure-button-primary" onclick="continuar(7)">Continuar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <form id="experiment8" class="pure-form">
+            <fieldset>
+                <h3>Gracias por ayudarnos!</h3>
+            </fieldset>
+        </form>
     </div>
     <script src="//www.google-analytics.com/cx/api.js?experiment=zG5m9oCRS3mzs9PXpuUxfQ"></script>
     <script type="text/javascript" src="scripts/experiment.js"></script>
