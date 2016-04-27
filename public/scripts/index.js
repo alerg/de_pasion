@@ -8,7 +8,11 @@ var logicaCheck = function(name, next, categoria_evento){
 	var deportes = [];
 	for(var i = 0; i < dep.length ; i++){
 		if(dep[i].checked){
-			deportes.push(dep[i].value);				
+			if(dep[i].value == 'otro'){
+				deportes.push(document.querySelector('#otroDeporte').value);
+			}else{
+				deportes.push(dep[i].value);				
+			}
 		}
 	}
 	if(deportes.length == 0){
@@ -18,7 +22,8 @@ var logicaCheck = function(name, next, categoria_evento){
 		document.getElementById('experiment' + preguntaActual).classList.remove('show');
 		document.cookie = 'pregunta' + preguntaActual +'='+ next + ';';
 		preguntaActual = next;
-    	ga('send', 'event', 'investigacion', categoria_evento, deportes.join());
+		console.log(deportes.join());
+    	//ga('send', 'event', 'investigacion', categoria_evento, deportes.join());
 	}
 }
 
@@ -33,7 +38,7 @@ var logicaRadio = function(name, categoria_evento, nextSI, nextNO){
 	}
 	if(value){
 		isOk = true;
-    	ga('send', 'event', 'investigacion', categoria_evento, value);
+    	//ga('send', 'event', 'investigacion', categoria_evento, value);
     	document.getElementById('experiment' + preguntaActual).classList.remove('show');
     	if(value == 'NO'){
 			document.cookie = 'pregunta' + preguntaActual +'='+ nextNO || nextSI + ';';
@@ -91,6 +96,14 @@ function continuar(){
 		if(isOk){
 			document.getElementById('experiment'+ preguntaActual).classList.add('show');
 		}
+	}
+}
+
+function verOtro(){
+	if(document.getElementById('otro').checked){
+		document.querySelector('.otro').classList.add('show');
+	}else{
+		document.querySelector('.otro').classList.remove('show');
 	}
 }
 

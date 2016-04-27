@@ -5,6 +5,7 @@
     <title>Hay Equipo</title>
     <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 </head>
 
 <body>
@@ -20,7 +21,12 @@
                     <label for="tenis"><input type="checkbox" name="deporte" id="tenis" value="tenis" /> Tenis</label>
                     <label for="voley"><input type="checkbox" name="deporte" id="voley" value="voley" /> Voley</label>
                     <label for="basquet"><input type="checkbox" name="deporte" id="basquet" value="basquet" /> Basquet</label>
-                    <label for="otro"><input type="checkbox" name="deporte" id="otro" value="otro" /> Otro</label>
+                    <label for="hockey"><input type="checkbox" name="deporte" id="hockey" value="hockey" /> Hockey</label>
+                    <label for="rugby"><input type="checkbox" name="deporte" id="rugby" value="rugby" /> Rugby</label>
+                    <label for="otro"><input type="checkbox" name="deporte" id="otro" value="otro" onchange="verOtro()"/> Otro</label>
+                    <div class="otro">
+                        <input id="otroDeporte" maxlength='50'/>
+                    </div>
                     <div>
                         <button type="button" class="pure-button pure-button-primary" onclick="continuar(1, 'deportes')">Continuar</button>
                     </div>
