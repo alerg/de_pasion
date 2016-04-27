@@ -23,7 +23,7 @@ var logicaCheck = function(name, next, categoria_evento){
 		document.cookie = 'pregunta' + preguntaActual +'='+ next + ';';
 		preguntaActual = next;
 		console.log(deportes.join());
-    	//ga('send', 'event', 'investigacion', categoria_evento, deportes.join());
+    	ga('send', 'event', 'investigacion', categoria_evento, deportes.join());
 	}
 }
 
@@ -38,7 +38,7 @@ var logicaRadio = function(name, categoria_evento, nextSI, nextNO){
 	}
 	if(value){
 		isOk = true;
-    	//ga('send', 'event', 'investigacion', categoria_evento, value);
+    	ga('send', 'event', 'investigacion', categoria_evento, value);
     	document.getElementById('experiment' + preguntaActual).classList.remove('show');
     	if(value == 'NO'){
 			document.cookie = 'pregunta' + preguntaActual +'='+ nextNO || nextSI + ';';
