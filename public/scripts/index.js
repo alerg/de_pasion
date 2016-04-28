@@ -75,13 +75,13 @@ function continuar(){
 				}
 			break;
 			case 2:
-				logicaRadio('experiment2Value', 'organiza_juega_partidos', 3, 8);
+				logicaRadio('experiment2Value', 'organiza_juega_partidos', 3);
 			break;
 			case 3:
 				logicaRadio('mes', 'cada_cuanto_juega', 4);
 			break;
 			case 4:
-				logicaRadio('experiment4Value', 'sumarse_a_desconocidos', 5, 6);
+				logicaRadio('experiment4Value', 'sumarse_a_desconocidos', 5);
 			break;
 			case 5:
 				logicaRadio('experiment5Value', 'calificar_a_desconocidos', 6);
